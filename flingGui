@@ -520,7 +520,6 @@ rs.Stepped:Connect(function()
 	else
 		if runned then
 			speaker.Character.Humanoid.Health = 0
-			newChar:Destroy()
 			runned = false
 		end
 	end
