@@ -3,6 +3,11 @@ local lh = game.Players.LocalPlayer.Character.HumanoidRootPart
 local isfling = false
 game.Players.LocalPlayer.Chatted:Connect(function(chat)
 	if chat == "!fling all" then
+		for i,v in pairs(game.Players.LocalPlayer.Character:GetChildren())
+			if v:IsA("BasePart") and v.Name ~= "HumanoidRootPart" then
+				v.CanCollide = false
+			end
+		end
 		for i,v in pairs(players) do
 			if v ~= game.Players.LocalPlayer then
 				if isfling == true then
