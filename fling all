@@ -1,0 +1,39 @@
+local players = game.Players:GetChildren()
+local lh = game.Players.LocalPlayer.Character.HumanoidRootPart
+local isfling = false
+game.Players.LocalPlayer.Chatted:Connect(function(chat)
+	if chat == "!fling all" then
+		for i,v in pairs(players) do
+			if v ~= game.Players.LocalPlayer then
+				if isfling == true then
+					isfling = true
+					local lol = v.Character.HumanoidRootPart
+					local new = 0
+					repeat
+						lh.AssemblyAngularVelocity = Vector3.new(9999,9999,9999)
+						lh.Position = lol.Position
+						new += 1
+						wait(0.1)
+					until new == 50
+					isfling = false
+				else
+					repeat
+						wait(0.001)
+						print("waiting till flingd")
+					until isfling == false
+
+					isfling = true
+					local lol = v.Character.HumanoidRootPart
+					local new = 0
+					repeat
+						lh.AssemblyAngularVelocity = Vector3.new(9999,9999,9999)
+						lh.Position = lol.Position
+						new += 1
+						wait(0.1)
+					until new == 50
+					isfling = false
+				end
+			end
+		end
+	end
+end)
