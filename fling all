@@ -16,8 +16,9 @@ game.Players.LocalPlayer.Chatted:Connect(function(chat)
 					local lol = v.Character.HumanoidRootPart
 					local new = 0
 					repeat
-						lh.AssemblyAngularVelocity = Vector3.new(9999,9999,9999)
 						lh.Position = lol.Position
+						lh.AssemblyAngularVelocity = Vector3.new(9999,9999,9999)
+						
 						new += 1
 						wait(0.1)
 					until new == 50
@@ -32,8 +33,9 @@ game.Players.LocalPlayer.Chatted:Connect(function(chat)
 					local lol = v.Character.HumanoidRootPart
 					local new = 0
 					repeat
-						lh.AssemblyAngularVelocity = Vector3.new(9999,9999,9999)
 						lh.Position = lol.Position
+						lh.AssemblyAngularVelocity = Vector3.new(9999,9999,9999)
+		
 						new += 1
 						wait(0.1)
 					until new == 50
