@@ -43,5 +43,10 @@ game.Players.LocalPlayer.Chatted:Connect(function(chat)
 				end
 			end
 		end
+		for i,v in pairs(game.Players.LocalPlayer.Character:GetChildren())
+			if v:IsA("BasePart") and v.Name ~= "HumanoidRootPart" then
+				v.CanCollide = true
+			end
+		end
 	end
 end)
