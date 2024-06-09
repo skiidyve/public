@@ -1,6 +1,7 @@
 local players = game.Players:GetChildren()
 local lh = game.Players.LocalPlayer.Character.HumanoidRootPart
 local isfling = false
+print("WORK GODDAM")
 game.Players.LocalPlayer.Chatted:Connect(function(chat)
 	if chat == "!fling all" then
 		for i,v in pairs(game.Players.LocalPlayer.Character:GetChildren())
